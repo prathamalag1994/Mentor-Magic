@@ -12,7 +12,6 @@ body {
 	left: 0px;
 	box-sizing: border-box;
 	object-fix: contain;
-	background: gray;
 }
 html {
 	overflow-x: hidden;
@@ -59,7 +58,7 @@ a {
 	background: gray;
 }
 .box {
-	margin: 20px 200px;
+	margin: 20px 100px;
 	border: 1px solid black;
 	background: #f2e9dc;
 	padding: 10px;
