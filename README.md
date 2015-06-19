@@ -1,7 +1,3 @@
 # Matching Software
 
-Matching mentors and mentees through an intuitive system and an easy UI.
-
-- Ruby on Rails
-- HTML/CSS/Javascript front-end
-- Java back-end
+Easy way for mentors to sign up, and for mentees to find mentors who would best fit their needs.

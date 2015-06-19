@@ -34,6 +34,17 @@ a {
 	padding: 100px;
 	text-align: center;
 }
+.columns {
+    -webkit-column-count: 2;
+    -webkit-column-gap: 10px;
+    -webkit-column-fill: auto;
+    -moz-column-count: 2;
+    -moz-column-gap: 10px;
+    -moz-column-fill: auto;
+    column-count: 2;
+    column-gap: 10px;
+    column-fill: auto;
+}
 .btn {
 	padding: 10px;
 	background: #9BD6BB;
@@ -61,10 +72,28 @@ a {
 	margin: 20px 100px;
 	border: 1px solid black;
 	background: #f2e9dc;
-	padding: 10px;
+	padding: 20px;
+}
+.col-box {
+	border: 1px solid black;
+	background: #f2e9dc;
+	padding: 20px;
+	margin: 20px 5px;
+    display: inline-block;
+    float: left;
+    -webkit-column-break-inside: avoid;
+    -moz-column-break-inside: avoid;
+    break-inside: avoid;
+}
+.inner-box {
+	border: 1px solid black;
 }
 .fifty {
 	width: 50%;
 	text-align: center;
+	margin: auto;
+}
+.match-imgs {
+	width: 300px;
 	margin: auto;
 }
