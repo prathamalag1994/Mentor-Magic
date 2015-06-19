@@ -1,3 +1,4 @@
+Skills I have: 
 <%= form_for @skill, url: {action: "create", controller: "skills"}, html: {class: "nifty_form"} do |f| %>
   Backend <%= f.check_box :backend %><br>
   Frontend <%= f.check_box :frontend %><br>
@@ -9,7 +10,23 @@
   Marketing <%= f.check_box :marketing %><br>
   <%= f.hidden_field :mid , :value => @user.id %>
   <%= f.hidden_field :ment , :value => @user.ment %>
-  <%= f.submit "Update Skills" %>
+  <%= f.submit "Update Skills" %><br>
+<% end %>
+
+<% if !@user.ment %>
+Skills I'd like in a mentor:
+<%= form_for @need, url: {action: "create", controller: "needs"}, html: {class: "nifty_form"} do |f| %>
+  Backend <%= f.check_box :backend %><br>
+  Frontend <%= f.check_box :frontend %><br>
+  UX <%= f.check_box :ux %><br>
+  Management <%= f.check_box :management %><br>
+  Design <%= f.check_box :design %><br>
+  Systems <%= f.check_box :systems %><br>
+  Analytics <%= f.check_box :analytics %><br>
+  Marketing <%= f.check_box :marketing %><br>
+  <%= f.hidden_field :mid , :value => @user.id %>
+  <%= f.submit "Update Skills" %><br>
+<% end %>
 <% end %>
 <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
 
