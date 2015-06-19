@@ -1,32 +1,58 @@
-Skills I have: 
+<head>
+  <title>MAGIC</title>
+  <link rel="stylesheet" type="text/css" href="../stylesheets/bootstrap-3.3.5-dist/css/bootstrap.css" />
+  <link rel="stylesheet" type="text/css" href="../stylesheets/main.css" />
+  <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+    <!-- Banner -->
+  <img src="../images/autodesk_logo_detail.png" style="width:10%"/>
+  <img id="banner" src="../images/magic-mentorship-program-600x129.png"/>
+
+  <div class="container">
+      <h1>Skills Requested</h1>
+    <div class="box">
+  <h2>Skills I have: </h2>
 <%= form_for @skill, url: {action: "create", controller: "skills"}, html: {class: "nifty_form"} do |f| %>
-  Backend <%= f.check_box :backend %><br>
-  Frontend <%= f.check_box :frontend %><br>
-  UX <%= f.check_box :ux %><br>
-  Management <%= f.check_box :management %><br>
-  Design <%= f.check_box :design %><br>
-  Systems <%= f.check_box :systems %><br>
-  Analytics <%= f.check_box :analytics %><br>
-  Marketing <%= f.check_box :marketing %><br>
+<div style="text-align: left; padding-left: 50px">
+  <%= f.check_box :backend %> Backend<br>
+  <%= f.check_box :frontend %> Frontend<br>
+  <%= f.check_box :ux %> UX<br>
+  <%= f.check_box :management %> Management<br>
+  <%= f.check_box :design %> Design<br>
+  <%= f.check_box :systems %> Systems<br>
+  <%= f.check_box :analytics %> Analytics<br>
+  <%= f.check_box :marketing %> Marketing<br>
   <%= f.hidden_field :mid , :value => @user.id %>
   <%= f.hidden_field :ment , :value => @user.ment %>
+</div>
+<br>
   <%= f.submit "Update Skills" %><br>
 <% end %>
+</div>
 
 <% if !@user.ment %>
-Skills I'd like in a mentor:
+<div class="box">
+<h2>Skills I'd like in a mentor:</h2>
 <%= form_for @need, url: {action: "create", controller: "needs"}, html: {class: "nifty_form"} do |f| %>
-  Backend <%= f.check_box :backend %><br>
-  Frontend <%= f.check_box :frontend %><br>
-  UX <%= f.check_box :ux %><br>
-  Management <%= f.check_box :management %><br>
-  Design <%= f.check_box :design %><br>
-  Systems <%= f.check_box :systems %><br>
-  Analytics <%= f.check_box :analytics %><br>
-  Marketing <%= f.check_box :marketing %><br>
+  <div style="text-align: left; padding-left: 50px">
+  <%= f.check_box :backend %> Backend<br>
+  <%= f.check_box :frontend %> Frontend<br>
+  <%= f.check_box :ux %> UX<br>
+  <%= f.check_box :management %> Management<br>
+  <%= f.check_box :design %> Design<br>
+  <%= f.check_box :systems %> Systems<br>
+  <%= f.check_box :analytics %> Analytics<br>
+  <%= f.check_box :marketing %> Marketing<br>
   <%= f.hidden_field :mid , :value => @user.id %>
+</div>
+<br>
   <%= f.submit "Update Skills" %><br>
 <% end %>
+</div>
 <% end %>
 <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
-
+</div>
+</body>
+<footer>Autodesk Team Interns</footer>

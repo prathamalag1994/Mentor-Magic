@@ -79,6 +79,7 @@ a {
 	background: #f2e9dc;
 	padding: 20px;
 	margin: 20px 5px;
+	width: 300px;
     display: inline-block;
     float: left;
     -webkit-column-break-inside: avoid;
